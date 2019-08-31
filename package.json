@@ -1,0 +1,20 @@
+{
+  "name": "static_cv_page",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "yarn run build && next export"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "next": "^9.0.5",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "devDependencies": {
+    "frontmatter-markdown-loader": "^2.0.0"
+  }
+}
