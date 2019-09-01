@@ -46,29 +46,22 @@ softSkills:
 experience:
   - company: Zalando SE
     dates: Oct 2016 - Present
-    place: 'Berlin, DE'
-    skills: 'HTML, CSS JavaScript, Angujar, React, AWS, NPM / Yarn, Git, NodeJS'
-    title: Frontend Engineer
-  - company: Dataconomy
-    dates: Aug – Sept  2016
-    place: 'Berlin, DE'
-    skills: 'HTML, CSS, PHP, JavaScript, Jquery'
-    title: Web Developer
-volunteer:
-  - contribution: >-
-      Creation and facilitation of a series of workshops around basic Javacript
-      and the DOM
-    details:
-      - detail: >-
-          Co-created and delivered resources and training supporting Syrian
-          refugees to get into Berlin the Tech scene.
-      - detail: >-
-          In partnership with, the program offered 2 internships for most
-          successful candidates.
-    linkto: 'https://www.teachsurfing.org/#/stories/74'
+
+    contributions: 
+      - contribution:  Development, optimisation and automatisation of Zalando Marketing Services Landing Pages Components Library
+        details:
+          - detail: Developing self-contained, reusable components to render highly customised layouts.
+          - detail: Automating deployment of landing pages with CLI tool built on Node with Comander.js.
+volunteer: 
+  - organisation:  Teachsurfing -Economic Empowerment for Refugees
+    role: Javascript Instructor 
     linktointro: Read about this experience here
-    organisation: Teachsurfing -Economic Empowerment for Refugees
-    role: Javascript Instructor
+    linkto: https://www.teachsurfing.org/#/stories/74
+    contributions: 
+      - contribution:  Creation and facilitation of a series of workshops around basic Javacript and the DOM
+        details:
+          - detail: Co-created and delivered resources and training supporting Syrian refugees to get into Berlin the Tech scene.
+          - detail: In partnership with, the program offered 2 internships for most successful candidates.
 trainings:
   - dates: Oct – Dec 2017
     location: 'Berlin, DE'
