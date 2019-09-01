@@ -46,7 +46,8 @@ softSkills:
 experience:
   - company: Zalando SE
     dates: Oct 2016 - Present
-
+    place: Berlin, DE
+    title: Frontend Engineer
     contributions: 
       - contribution:  Development, optimisation and automatisation of Zalando Marketing Services Landing Pages Components Library
         details:
