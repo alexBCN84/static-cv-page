@@ -45,24 +45,63 @@ softSkills:
     subheading: RESTful API
 experience:
   - company: Zalando SE
+    contributions:
+      - contribution: >-
+          Development, optimisation and automatisation of Zalando Marketing
+          Services Landing Pages Components Library
+        details:
+          - detail: >-
+              Developing self-contained, reusable components to render highly
+              customised layouts.
+          - detail: >-
+              Automating deployment of landing pages with CLI tool built on Node
+              with Comander.js.
+      - contribution: Sales enhancement and customer satisfaction
+        details:
+          - detail: >-
+              Setting up a CMS tool for brands to compose standard landing pages
+              layouts in line with campaign objectives.
+          - detail: >-
+              Creating highly customised components to cater for large campaign
+              specific requests.
+      - contribution: >-
+          Implementation and update of Frontend functionality for Zalando
+          Marketing Services tools.
+        details:
+          - detail: >-
+              Developing, testing and deploying new UI features for Bowerbird
+              -ZMS Campaign Management Tool.
     dates: Oct 2016 - Present
-    place: Berlin, DE
+    place: 'Berlin, DE'
+    skills: 'HTML, CSS JavaScript, AngujarJS, React, AWS, NPM / Yarn, Git, NodeJS'
     title: Frontend Engineer
-    contributions: 
-      - contribution:  Development, optimisation and automatisation of Zalando Marketing Services Landing Pages Components Library
+  - company: Dataconomy
+    contributions:
+      - contribution: Development of event microsites as part work based training program
         details:
-          - detail: Developing self-contained, reusable components to render highly customised layouts.
-          - detail: Automating deployment of landing pages with CLI tool built on Node with Comander.js.
-volunteer: 
-  - organisation:  Teachsurfing -Economic Empowerment for Refugees
-    role: Javascript Instructor 
+          - detail: >-
+              Building and updating the microsite for Tel Aviv Datanatives 2016
+              Conference.
+    dates: Aug – Sept  2016
+    place: 'Berlin, DE'
+    skills: 'HTML, CSS, PHP, JavaScript, Jquery'
+    title: Web Developer
+volunteer:
+  - contributions:
+      - contribution: >-
+          Creation and facilitation of a series of workshops around basic
+          Javacript and the DOM
+        details:
+          - detail: >-
+              Co-created and delivered resources and training supporting Syrian
+              refugees to get into Berlin the Tech scene.
+          - detail: >-
+              In partnership with, the program offered 2 internships for most
+              successful candidates.
+    linkto: 'https://www.teachsurfing.org/#/stories/74'
     linktointro: Read about this experience here
-    linkto: https://www.teachsurfing.org/#/stories/74
-    contributions: 
-      - contribution:  Creation and facilitation of a series of workshops around basic Javacript and the DOM
-        details:
-          - detail: Co-created and delivered resources and training supporting Syrian refugees to get into Berlin the Tech scene.
-          - detail: In partnership with, the program offered 2 internships for most successful candidates.
+    organisation: Teachsurfing -Economic Empowerment for Refugees
+    role: Javascript Instructor
 trainings:
   - dates: Oct – Dec 2017
     location: 'Berlin, DE'
