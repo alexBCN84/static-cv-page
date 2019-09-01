@@ -16,7 +16,7 @@ collections:
         - { label: "Linkedin", name: "linkedin", widget: "string" }
         - { label: "Github", name: "github", widget: "string" }
         - { label: "Address", name: "address", widget: "string" }
-        - { label: "Summary", name: "summary", widget: "markdown" }
+        - { label: "Body", name: "body", widget: "markdown" }
         - label: "Key Skills"
           name: "keySkills"
           widget: "list"
