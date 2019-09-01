@@ -16,15 +16,21 @@ experience:
     skills: HTML, CSS JavaScript, Angujar, React, AWS, NPM / Yarn, Git, NodeJS
     place: Berlin, DE
     dates: Oct 2016 - Present
+    contributions: 
+      - contribution:  Development, optimisation and automatisation of Zalando Marketing Services Landing Pages Components Library
+        details:
+          - detail: Developing self-contained, reusable components to render highly customised layouts.
+          - detail: Automating deployment of landing pages with CLI tool built on Node with Comander.js.
 volunteer: 
   - organisation:  Teachsurfing -Economic Empowerment for Refugees
     role: Javascript Instructor 
     linktointro: Read about this experience here
     linkto: https://www.teachsurfing.org/#/stories/74
-    contribution:  Creation and facilitation of a series of workshops around basic Javacript and the DOM
-    details:
-      - detail: Co-created and delivered resources and training supporting Syrian refugees to get into Berlin the Tech scene.
-      - detail: In partnership with, the program offered 2 internships for most successful candidates.
+    contributions: 
+      - contribution:  Creation and facilitation of a series of workshops around basic Javacript and the DOM
+        details:
+          - detail: Co-created and delivered resources and training supporting Syrian refugees to get into Berlin the Tech scene.
+          - detail: In partnership with, the program offered 2 internships for most successful candidates.
 trainings:
   - trainingProvider: Women Tech Maker Berlin
     trainingCourse: "JS Crash Course: Developing a Backend Application with NodeJS" 

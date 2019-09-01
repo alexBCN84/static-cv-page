@@ -37,6 +37,16 @@ collections:
             - { label: "Skills", name: "skills", widget: "string" }
             - { label: "Place", name: "place", widget: "string" }
             - { label: "Dates", name: "dates", widget: "string" }
+            - label: "Contributions"
+              name: "contributions" 
+              widget: "list"
+              fields:
+                - { label: "Contribution", name: "contribution", widget: "string"}
+                - label: "details"
+                  name: "details"
+                  widget: "list"
+                  fields: 
+                    - { label: "Detail", name: "detail", widget: "string" }
         - label: "Volunteer Experience"
           name: "volunteer"
           widget: "list"
@@ -45,12 +55,16 @@ collections:
             - { label: "Role", name: "role", widget: "string" }
             - { label: "Linktointro", name: "linktointro", widget: "string" }
             - { label: "Linkto", name: "linkto", widget: "string" }
-            - { label: "Contribution", name: "contribution", widget: "string" }
-            - label: "details"
-              name: "details"
+            - label: "Contributions"
+              name: "contributions" 
               widget: "list"
-              fields: 
-                - { label: "Detail", name: "detail", widget: "string" }
+              fields:
+                - { label: "Contribution", name: "contribution", widget: "string"}
+                - label: "details"
+                  name: "details"
+                  widget: "list"
+                  fields: 
+                    - { label: "Detail", name: "detail", widget: "string" }
         - label: "Bootcamps, workshops and training events"
           name: "trainings"
           widget: "list"

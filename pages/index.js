@@ -2,7 +2,6 @@ import content from '../content/cv.md';
 const { html, attributes: {name, title, email, linkedin, github, address, experience, keySkills, softSkills, volunteer, trainings, education, languages}} = content
 
 export default function Cv(){
-  
   return (
     <article>
       <section>
@@ -41,7 +40,7 @@ export default function Cv(){
       </section>
       <section>
         <h2>PROFESSIONAL EXPERIENCE IN TECH</h2>
-        {experience.map(({company, title, skills, place, dates}, i) => {
+        {experience.map(({company, title, skills, place, dates, contributions}, i) => {
           return (
           <React.Fragment key={i}>
             <p>{company}</p>
@@ -49,19 +48,37 @@ export default function Cv(){
               <p>{skills}</p>
               <p>{place}</p>
               <p>{dates}</p>
+              {contributions.map(({contribution, details}, i) => {
+                return (
+                <React.Fragment key={i}>
+                  <h3>{contribution}</h3>
+                  <ul>
+                  {details.map(({detail}, i) => <li key={i}>{detail}</li>)}
+                  </ul>
+                </React.Fragment>    
+                )
+              })}
           </React.Fragment> 
           )
         })}
       </section>
       <section>
         <h2>VOLUNTEER EXPERIENCE</h2>
-        {volunteer.map(({organisation, role, linktointro, linkto, contribution, details}, i) => {
+        {volunteer.map(({organisation, role, linktointro, linkto, contributions}, i) => {
           return (
           <React.Fragment key={i}>
             <p><strong>{organisation} | {role}</strong></p>
               <p><em>{linktointro}</em> <a href={linkto}>{linkto}</a></p>
-              <p><strong>{contribution}</strong></p>
-              <ul>{details.map(({detail}, i) => <li key={i}>{detail}</li>)}</ul>
+              {contributions.map(({contribution, details}, i) => {
+                return (
+                <React.Fragment key={i}>
+                  <h3>{contribution}</h3>
+                  <ul>
+                  {details.map(({detail}, i) => <li key={i}>{detail}</li>)}
+                  </ul>
+                </React.Fragment>    
+                )
+              })}
           </React.Fragment> 
           )
         })}
