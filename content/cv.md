@@ -7,15 +7,53 @@ github: github.com/alexBCN84
 address: 114 Otto-Suhr-Allee Berlin DE
 keySkills:
   - skill: Web development & Maintenance
+  - skill: Frontend Development
+  - skill: Javascript Frameworks
+  - skill: Responsive development
+  - skill: Functional Javascript
+  - skill: API integration
 softSkills:
   - heading: UI Styling
     subheading: 'CSS, SCSS, CSS in JS, CSS Modules.'
+  - heading: Frontend Frameworks
+    subheading: 'Bootstrap, Semantic UI'
+  - heading: Data Interchange Format
+    subheading: JSON
+  - heading: Cloud Platform
+    subheading: AWS
+  - heading: HTTP Request Libraries
+    subheading: Axios
+  - heading: Javascript Frameworks
+    subheading: 'AngularJS, React16 NextJS'
+  - heading: React Styling libraries
+    subheading: 'Radium, Styled Components'
+  - heading: Database
+    subheading: MongoDB
+  - heading: Runtime environment
+    subheading: NodeJS
+  - heading: Web Frameworks
+    subheading: Express
+  - heading: Scripting Languages
+    subheading: Javascript ES6+
+  - heading: Markup and templating languages
+    subheading: 'HTML, PUG EJS, YAML'
+  - heading: Module bundler
+    subheading: Webpack
+  - heading: Version Control
+    subheading: Git
+  - heading: HTTP Requests
+    subheading: RESTful API
 experience:
   - company: Zalando SE
     dates: Oct 2016 - Present
     place: 'Berlin, DE'
     skills: 'HTML, CSS JavaScript, Angujar, React, AWS, NPM / Yarn, Git, NodeJS'
     title: Frontend Engineer
+  - company: Dataconomy
+    dates: Aug – Sept  2016
+    place: 'Berlin, DE'
+    skills: 'HTML, CSS, PHP, JavaScript, Jquery'
+    title: Web Developer
 volunteer:
   - contribution: >-
       Creation and facilitation of a series of workshops around basic Javacript
