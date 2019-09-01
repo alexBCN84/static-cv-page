@@ -37,6 +37,6 @@ education:
     year: 2016
 languages: Spanish & Catalan – native | English, French & Italian – fluent | German – intermediate level
 ---
+Welcome to my awesome page about cats of the internet. 
 
-
-2 – 3 years experienced Web Developer with a previous background in Linguistics, Translations and Education. Successfully undertook a career change into Tech in 2016 – (more information about previous career achievements on my LinkedIn profile). A tenacious learner and determined individual with a growth mindset who achieved a career start in web development at Zalando back in 2016. In 2018 I contributed to exceed ZMS campaigns revenue targets for Zalando Marketing Services with the development of highly customized, brand-tailored landing pages and assisted in the development of key UX UI features, improving the efficiency of ZMS campaign management tooling. Currently focused on expanding my professional expertise in Frontend - React environment, and Fullstack JS development.
+This page is built with NextJS, and content is managed in Netlify CMS
