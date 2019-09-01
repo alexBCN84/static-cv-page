@@ -6,16 +6,65 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-    - label: "Home"
-      name: "home"
-      file: "content/home.md"
+    - label: "Cv"
+      name: "cv"
+      file: "content/cv.md"
       fields: 
-        - { label: "Title", name: "title", widget: "string"}
-        - { label: "Publish Date", name: "date", widget: "datetime" }
-        - { label: "Body", name: "body", widget: "markdown"}
-        - label: 'Cats'
-          name: "cats"
-          widget: list
+        - { label: "Name", name: "name", widget: "string"}
+        - { label: "Title", name: "tile", widget: "string" }
+        - { label: "Email", name: "email", widget: "string"}
+        - { label: "Linkedin", name: "linkedin", widget: "linkedin" }
+        - { label: "Github", name: "github", widget: "string" }
+        - { label: "Address", name: "address", widget: "string" }
+        - { label: "Summary", name: "summary", widget: "markdown" }
+        - label: "Key Skills"
+          name: "keySkills"
+          widget: "list"
+          fields:
+            - { label: "Skill", name: "skill", widget: "string" }
+        - label: "Soft Skills"
+          name: "softSkills"
+          widget: "list"
+          fields:
+            - { label: "Heading", name: "heading", widget: "string" }
+            - { label: "Subheading", name: "subheading", widget: "string" }
+        - label: "Professional Experience"
+          name: "experience"
+          widget: "list"
           fields: 
-            - { label: "Name", name: "name", widget: "string"}
-            - { label: "Description", name: "description", widget: "text"}
+            - { label: "Company", name: "company", widget: "string" }
+            - { label: "Title", name: "title", widget: "string" }
+            - { label: "Skills", name: "skills", widget: "string" }
+            - { label: "Place", name: "place", widget: "string" }
+            - { label: "Dates", name: "dates", widget: "string" }
+        - label: "Volunteer Experience"
+          name: "volunteer"
+          widget: "list"
+          fields: 
+            - { label: "Organistation", name: "organisation", widget: "string" }
+            - { label: "Role", name: "role", widget: "string" }
+            - { label: "Linktointro", name: "linktointro", widget: "string" }
+            - { label: "Linkto", name: "linkto", widget: "string" }
+            - { label: "Contribution", name: "contribution", widget: "string" }
+            - label: "details"
+              name: "details"
+              widget: "list"
+              fields: 
+                - { label: "Detail", name: "detail", widget: "string" }
+        - label: "Bootcamps, workshops and training events"
+          name: "trainings"
+          widget: "list"
+          fields: 
+            - { label: "Training Provider", name: "trainingProvider", widget: "string" }
+            - { label: "Training Course", name: "trainingCourse", widget: "string" }
+            - { label: "Location", name: "location", widget: "string" }
+            - { label: "Dates", name: "dates", widget: "string" }
+        - label: "Education"
+          name: "education"
+          widget: "list"
+          fields: 
+            - { label: "Title", name: "title", widget: "string" }
+            - { label: "Provider", name: "provider", widget: "string" }
+            - { label: "Location", name: "location", widget: "string" }
+            - { label: "Year", name: "year", widget: "string" }
+        - { label: "Languages", name: "languages", widget: "string" }

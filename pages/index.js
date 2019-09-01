@@ -1,22 +1,97 @@
-import React, { Component } from 'react'
-import content from '../content/home.md';
+import content from '../content/cv.md';
+const { html, attributes: {name, title, email, linkedin, github, address, experience, keySkills, softSkills, volunteer, trainings, education, languages}} = content
 
-export default class Home extends Component {
-  render() {
-    let { html , attributes:{ title, cats } } = content;
-    return (
-      <article>
-          <h1>{title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: html }}/>
-          <ul>
-              { cats.map((cat, k) => (
-                  <li key={k}>
-                    <h2>{cat.name}</h2>
-                    <p>{cat.description}</p>
-                  </li>
-              ))}
-          </ul>
-      </article>
-    )
-  }
+export default function Cv(){
+  
+  return (
+    <article>
+      <section>
+        <p>{name}</p>
+        <p>{title}</p>
+        <p>{email}</p>
+        <p>{linkedin}</p>
+        <p>{github}</p>
+        <p>{address}</p>
+      </section>
+      <section>
+        <h2>KEY SKILLS</h2>
+        <ul>
+        {keySkills.map(({skill}, i) => {
+          return (
+          <React.Fragment key={i}>
+            <li>{skill}</li>
+          </React.Fragment> 
+          )
+        })}
+        </ul>
+      </section>
+      <section>
+        <h2>SUMMARY</h2>
+        <div dangerouslySetInnerHTML={{ __html: html }}/>
+      </section>
+      <section>
+        <h2>SOFT SKILLS</h2>
+        <ul>
+        {softSkills.map(({heading, subheading}, i) => {
+          return (
+            <li key={i}><strong>{heading}: </strong>{subheading}</li>
+          )
+        })}
+        </ul>
+      </section>
+      <section>
+        <h2>PROFESSIONAL EXPERIENCE IN TECH</h2>
+        {experience.map(({company, title, skills, place, dates}, i) => {
+          return (
+          <React.Fragment key={i}>
+            <p>{company}</p>
+              <p>{title}</p>
+              <p>{skills}</p>
+              <p>{place}</p>
+              <p>{dates}</p>
+          </React.Fragment> 
+          )
+        })}
+      </section>
+      <section>
+        <h2>VOLUNTEER EXPERIENCE</h2>
+        {volunteer.map(({organisation, role, linktointro, linkto, contribution, details}, i) => {
+          return (
+          <React.Fragment key={i}>
+            <p><strong>{organisation} | {role}</strong></p>
+              <p><em>{linktointro}</em> <a href={linkto}>{linkto}</a></p>
+              <p><strong>{contribution}</strong></p>
+              <ul>{details.map(({detail}, i) => <li key={i}>{detail}</li>)}</ul>
+          </React.Fragment> 
+          )
+        })}
+      </section>
+      <section>
+        <h2>BOOTCAMPS, WORKSHOPS AND TRAINING EVENTS</h2>
+        {trainings.map(({trainingProvider, trainingCourse, location, dates}, i) => {
+          return (
+          <React.Fragment key={i}>
+            <p><strong>{trainingProvider} | </strong>{trainingCourse}</p>
+            <p>{location} |  {dates}</p>
+          </React.Fragment> 
+          )
+        })}
+      </section>
+      <section>
+        <h2>EDUCATION</h2>
+        {education.map(({title, provider, location, year}, i) => {
+          return (
+          <React.Fragment key={i}>
+            <p><strong>{title} | </strong>{provider}</p>
+            <p>{location} |  {year}</p>
+          </React.Fragment> 
+          )
+        })}
+      </section>
+      <section>
+        <h2>LANGUAGES</h2>
+        <p>{languages}</p>
+      </section>
+    </article>
+  )
 }
