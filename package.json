@@ -12,7 +12,8 @@
   "dependencies": {
     "next": "^9.0.5",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "react-grid-lib": "^0.2.8"
   },
   "devDependencies": {
     "frontmatter-markdown-loader": "^2.0.0"
