@@ -1,15 +1,15 @@
 import React from 'react';
 
-const PersonalDetails = ({name, title, email, linkedin, github, address}) => {
+const PersonalDetails = ({name, title, email, linkedin, github, address, styles}) => {
     return (
-        <section>
-        <p>{name}</p>
+        <div>
+        <p style={styles}>{name}</p>
         <p>{title}</p>
         <p>{email}</p>
         <p>{linkedin}</p>
         <p>{github}</p>
         <p>{address}</p>
-      </section>
+      </div>
     )
 }
 
