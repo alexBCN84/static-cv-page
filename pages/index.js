@@ -24,7 +24,11 @@ const css = {
 }
 
 
+<<<<<<< HEAD
 const PersonalDetails = withSection(_PersonalDetails, {color: 'white'})({backgroundColor: 'red'});
+=======
+const PersonalDetails = withSection(_PersonalDetails)({backgroundColor: 'red'});
+>>>>>>> 7fa8487d42edbdda1533263ee3b4fdb76e5c7118
 const Summary = withSection(_Summary)({backgroundColor: 'blue'});
 const KeySkills = withSection(_KeySkills)({backgroundColor: 'green'});
 const SoftSkills = withSection(_SoftSkills)({backgroundColor: 'pink'});
