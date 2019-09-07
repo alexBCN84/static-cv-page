@@ -7,36 +7,34 @@ import _KeySkills from '../components/cv/key-skills';
 import _SoftSkills from '../components/cv/soft-skills';
 import _Trainings from '../components/cv/trainings';
 import _Education from '../components/cv/education';
-import _Languages from '../components/cv/key-skills/cv-languages';
+import _Languages from '../components/cv/cv-languages';
 import withSection from '../components/HOC/Section';
 
 
-const { html, attributes: {name, title, email, linkedin, github, address, experience, keySkills, softSkills, volunteer, trainings, education, languages}} = content
-const personalDetails = {name, title, email, linkedin, github, address};
+const { html, attributes: {name, title, email, phone, linkedin, github, address, experience, keySkills, softSkills, volunteer, trainings, education, languages}} = content
+const personalDetails = {name, title, email, phone, linkedin, github, address};
 
 const css = {
   article: {
-    backgroundColor: 'yellow',
     display: 'grid',
-    gridTemplateColumns: '49% 49%',
-    gridGap: '1%'
+    gridGap: '20px',
+    padding: '60px',
+    boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
+    maxWidth: 1200,
+    margin: 'auto'
   }
 }
 
 
-<<<<<<< HEAD
-const PersonalDetails = withSection(_PersonalDetails, {color: 'white'})({backgroundColor: 'red'});
-=======
-const PersonalDetails = withSection(_PersonalDetails)({backgroundColor: 'red'});
->>>>>>> 7fa8487d42edbdda1533263ee3b4fdb76e5c7118
-const Summary = withSection(_Summary)({backgroundColor: 'blue'});
-const KeySkills = withSection(_KeySkills)({backgroundColor: 'green'});
-const SoftSkills = withSection(_SoftSkills)({backgroundColor: 'pink'});
-const ProfessionalExperience = withSection(_ProfessionalExperience)({backgroundColor: 'orange'});
-const VolunteerExperience = withSection(_VolunteerExperience)({backgroundColor: 'grey'});
-const Trainings = withSection(_Trainings)({backgroundColor: 'white'});
-const Education = withSection(_Education)({backgroundColor: 'crimson'});
-const Languages = withSection(_Languages)({backgroundColor: 'coral'});
+const PersonalDetails = withSection(_PersonalDetails)({padding: 10});
+const Summary = withSection(_Summary)({padding: 10});
+const KeySkills = withSection(_KeySkills)({padding: 10});
+const SoftSkills = withSection(_SoftSkills)({padding: 10});
+const ProfessionalExperience = withSection(_ProfessionalExperience)({padding: 10, marginBottom: -60});
+const VolunteerExperience = withSection(_VolunteerExperience)({padding: 10});
+const Trainings = withSection(_Trainings)({padding: 10});
+const Education = withSection(_Education)({padding: 10});
+const Languages = withSection(_Languages)({padding: 10});
 
 export default function Cv(){
   return (

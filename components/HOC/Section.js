@@ -4,7 +4,7 @@ import React from 'react';
 export default function withSection(WrappedComponent, stylesForWrappedComponent){
     return (styles) => {
         const WithSection = (props) => (
-            <section style={styles}>
+            <section style={{marginBotton: 30, ...styles}}>
                 <WrappedComponent {...props} styles={stylesForWrappedComponent}/>
             </section>
         )

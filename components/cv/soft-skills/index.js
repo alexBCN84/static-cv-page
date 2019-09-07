@@ -1,17 +1,13 @@
 import React from 'react';
+import Skills from '../skills';
+import {headline} from '../styles';
 
 const SoftSkills = ({title, content}) => {
     return (
-      <section>
-        <h2>{title}</h2>
-        <ul>
-        {content.map(({heading, subheading}, i) => {
-          return (
-            <li key={i}><strong>{heading}: </strong>{subheading}</li>
-          )
-        })}
-        </ul>
-      </section>
+      <React.Fragment>
+        <h2 style={headline}>{title}</h2>
+        <Skills content={content} type="soft"/>
+      </React.Fragment>
     )
 }
 

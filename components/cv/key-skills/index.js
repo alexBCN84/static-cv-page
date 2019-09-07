@@ -1,19 +1,13 @@
 import React from 'react';
+import {headline} from '../styles';
+import Skills from '../skills';
 
 const KeySkills = ({title, content}) => {
     return (
-      <section>
-        <h2>{title}</h2>
-        <ul>
-        {content.map(({skill}, i) => {
-          return (
-          <React.Fragment key={i}>
-            <li>{skill}</li>
-          </React.Fragment> 
-          )
-        })}
-        </ul>
-      </section>
+      <React.Fragment>
+        <h2 style={headline}>{title}</h2>
+        <Skills content={content} type="key"/>
+      </React.Fragment>
     )
 }
 
