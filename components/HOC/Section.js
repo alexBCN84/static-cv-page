@@ -16,5 +16,5 @@ export default function withSection(WrappedComponent, stylesForWrappedComponent)
 
 
 function getDisplayName(WrappedComponent){
-    return console.log(WrappedComponent.displayName || WrappedComponent.name || 'Component');
+    return WrappedComponent.displayName || WrappedComponent.name || 'Component';
 }
