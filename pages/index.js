@@ -42,15 +42,6 @@ const personalDetails = {
   address
 };
 
-const article = {
-  display: "grid",
-  gridGap: "20px",
-  padding: "60px",
-  boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-  maxWidth: 1200,
-  margin: "auto"
-};
-
 const PersonalDetails = withSection(_PersonalDetails)({ padding: 10 });
 const Summary = withSection(_Summary)({ padding: 10 });
 const KeySkills = withSection(_KeySkills)({ padding: 10 });
@@ -66,21 +57,7 @@ const Languages = withSection(_Languages)({ padding: 10 });
 
 export default function Cv() {
   return (
-    <article style={article}>
-      <Container>
-        <Button>Normal Button</Button>
-        <Button primary>Primary Button</Button>
-        <TomatoButton>Tomato Button</TomatoButton>
-        {/*// In some cases you might want to change which tag or component a styled component renders.
-        // You can use the "as" polymorphic prop to dynamically swap out the element that receives the styles you wrote:
-         */}
-        <Button as="a" href="/">
-          Link with Button styles
-        </Button>
-        <TomatoButton as="a" href="/">
-          Link with Tomato Button styles
-        </TomatoButton>
-      </Container>
+    <CvContainer>
       <PersonalDetails {...personalDetails} />
       <Summary title="SUMMARY" content={{ __html: html }} />
       <KeySkills title="KEY SKILLS" content={keySkills} />
@@ -96,31 +73,15 @@ export default function Cv() {
       />
       <Education title="EDUCATION" content={education} />
       <Languages title="LANGUAGES" content={languages} />
-    </article>
+    </CvContainer>
   );
 }
 
-const Button = styled.button`
-  background: transparent;
-  border-radius: 3px;
-  border: 2px solid palevioletred;
-  color: palevioletred;
-  margin: 0 1em;
-  padding: 0.25em 1em;
-  ${props =>
-    props.primary &&
-    css`
-      background: palevioletred;
-      color: white;
-    `}
-`;
-
-// create a new component from another one by override styles
-const TomatoButton = styled(Button)`
-  color: tomato;
-  border-color: tomato;
-`;
-
-const Container = styled.div`
-  text-align: center;
+const CvContainer = styled.article`
+  display: grid;
+  grid-gap: 20px;
+  padding: 60px;
+  box-shadow: 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  max-width: 1200px;
+  margin: auto;
 `;
