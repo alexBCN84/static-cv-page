@@ -1,13 +1,17 @@
-import React from 'react';
-import {headline, content as languageContent} from '../styles';
+import React from "react";
+import { GridItem, Headline, Content } from "../styles";
 
-const Languages = ({title, content}) => {
-    return (
-      <React.Fragment>
-        <h2 style={headline}>{title}</h2>
-        <p style={languageContent}>{content}</p>
-      </React.Fragment>
-    )
-}
+const Languages = ({ title, content }) => {
+  return (
+    <React.Fragment>
+      <GridItem start="1" span="12">
+        <Headline as="h2">{title}</Headline>
+      </GridItem>
+      <GridItem start="1" span="12" style={{ marginTop: -30 }}>
+        <Content as="p">{content}</Content>
+      </GridItem>
+    </React.Fragment>
+  );
+};
 
 export default Languages;

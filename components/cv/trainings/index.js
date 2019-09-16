@@ -1,20 +1,34 @@
-import React from 'react';
-import {headline, content as trainingContent, details} from '../styles';
+import React from "react";
+import { GridItem, Headline, Content, Details } from "../styles";
 
-const Trainings = ({title, content}) => {
-    return (
-      <section>
-        <h2 style={headline}>{title}</h2>
-        {content.map(({trainingProvider, trainingCourse, location, dates}, i) => {
+const Trainings = ({ title, content }) => {
+  return (
+    <React.Fragment>
+      <GridItem start="1" span="12">
+        <Headline as="h2">{title}</Headline>
+      </GridItem>
+
+      {content.map(
+        ({ trainingProvider, trainingCourse, location, dates }, i) => {
           return (
-          <React.Fragment key={i}>
-            <p style={trainingContent}><strong>{trainingProvider} | </strong>{trainingCourse}</p>
-            <p style={details}>{location} |  {dates}</p>
-          </React.Fragment> 
-          )
-        })}
-      </section>
-    )
-}
+            <React.Fragment key={i}>
+              <GridItem start="1" span="12">
+                <Content as="p">
+                  <strong>{trainingProvider} | </strong>
+                  {trainingCourse}
+                </Content>
+              </GridItem>
+              <GridItem start="1" span="12" style={{ marginTop: -30 }}>
+                <Details as="p">
+                  {location} | {dates}
+                </Details>
+              </GridItem>
+            </React.Fragment>
+          );
+        }
+      )}
+    </React.Fragment>
+  );
+};
 
 export default Trainings;

@@ -1,44 +1,71 @@
-import React from 'react';
-import {grid, details, colors, subheadline} from '../styles';
+import React from "react";
+import {
+  Heading,
+  GridItem,
+  Details,
+  AddressDetails,
+  Subheadline
+} from "../styles";
 
-
-const styles = {
-  header: {
-    gridColumn: "1 / span 12",
-    gridRow: '1'
-  },
-  heading: {
-    fontSize: 30,
-    fontFamily: '"Lucida Sans Unicode", "Lucida Grande", sans-serif',
-    fontWeight: 900,
-    margin: '0px auto',
-    color: colors.black
-
-
-  }
-}
-
-
-const PersonalDetails = ({name, title, email, phone, linkedin, github, address}) => {
-    return (
-      <section style={grid}>
-        <div style={styles.header}>
-          <h1 style={styles.heading}>{name}</h1>
-          <h2 style={subheadline}>{title}</h2>
-        </div>
-        <div style={{gridColumn: '1 / span 5'}}>
-          <h3 style={details}>{email}</h3>
-          <h3 style={details}>{phone}</h3>
-        </div>
-        <div style={{gridColumn: '6 / span 4'}}>
-          <h3 style={{...details, textAlign: 'center'}}>{linkedin}</h3>
-          <h3 style={{...details, textAlign: 'center'}}>{github}</h3>
-        </div>
-        <div style={{gridColumn: '10 / span 3'}}>
-          <h3 style={{...details, textAlign: 'right'}}>{address}</h3>
-        </div>
-      </section>
-    )
-}
+const PersonalDetails = ({
+  name,
+  title,
+  email,
+  phone,
+  linkedin,
+  github,
+  address
+}) => {
+  return (
+    <React.Fragment>
+      <GridItem xs-start="1" sm-start="1" sm-span="5" xs-span="12">
+        <Heading>{name}</Heading>
+        <Subheadline>{title}</Subheadline>
+      </GridItem>
+      <GridItem
+        xs-start="1"
+        xs-span="12"
+        sm-start="6"
+        sm-span="7"
+        lg-start="1"
+        lg-span="5"
+      >
+        <Details as="h3" align="left" md-align="left">
+          {email}
+        </Details>
+        <Details as="h3" align="left" md-align="left">
+          {phone}
+        </Details>
+      </GridItem>
+      <GridItem
+        xs-start="1"
+        xs-span="12"
+        sm-start="6"
+        sm-span="7"
+        lg-start="6"
+        lg-span="4"
+      >
+        <Details as="h3" align="left" md-align="left" lg-align="center">
+          {linkedin}
+        </Details>
+        <Details as="h3" align="left" md-align="left" lg-align="center">
+          {github}
+        </Details>
+      </GridItem>
+      <GridItem
+        start="1"
+        span="12"
+        sm-start="6"
+        sm-span="7"
+        lg-start="10"
+        lg-span="3"
+      >
+        <AddressDetails align="left" lg-align="right">
+          {address}
+        </AddressDetails>
+      </GridItem>
+    </React.Fragment>
+  );
+};
 
 export default PersonalDetails;

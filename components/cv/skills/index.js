@@ -1,27 +1,42 @@
-import {details} from '../styles';
+import { Details, GridItemGrid, GridItem } from "../styles";
 
-const grid = {
-    display: 'grid',
-    gridGap: '20px',
-    gridTemplateColumns: 'repeat(12, 1fr)'
-  }
-  
-  export default function Skills({content, type}){
-    let counter = 1;
-    return (
-      <ul style={grid}>
-        {content.map(({skill, heading, subheading}, i) => {
-          let startColumn = counter;
-          counter = startColumn === 9 ? 1 : counter+=4; 
-          return (
-            <React.Fragment key={i}>
-              {type === 'key' && <li style={{...details, gridColumn: `${startColumn} / span 4`, marginTop: 0, marginBottom: -10}}>{skill}</li>}
-              {type === 'soft' && <li style={{...details, gridColumn: `${startColumn} / span 4`, marginTop: 0, marginBottom: -10}}><strong>{heading}: </strong>{subheading}</li>}
-            </React.Fragment> 
-            )
-          })
-        }
-      </ul>
-  
-    );
-  }
+export default function Skills({ content, type }) {
+  let xsCounter = 1,
+    smCounter = 1,
+    lgCounter = 1;
+  return (
+    <GridItemGrid columns="12" width="1fr" as="ul" style={{ marginBottom: 30 }}>
+      {content.map(({ skill, heading, subheading }, i) => {
+        let lgStart = lgCounter,
+          xsStart = xsCounter,
+          smStart = smCounter;
+
+        smCounter = smStart === 7 ? 1 : (smCounter += 6);
+        lgCounter = lgStart === 9 ? 1 : (lgCounter += 4);
+        return (
+          <GridItem
+            key={i}
+            start={xsStart}
+            sm-start={smStart}
+            lg-start={lgStart}
+            span="12"
+            sm-span="6"
+            lg-span="4"
+          >
+            {type === "key" && (
+              <Details as="li" style={{ marginTop: 0, marginBottom: -5 }}>
+                {skill}
+              </Details>
+            )}
+            {type === "soft" && (
+              <Details as="p" style={{ marginTop: 0, marginBottom: -5 }}>
+                <strong>{heading}: </strong>
+                {subheading}
+              </Details>
+            )}
+          </GridItem>
+        );
+      })}
+    </GridItemGrid>
+  );
+}
