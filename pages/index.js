@@ -1,5 +1,3 @@
-import styled, { css } from "styled-components";
-
 import content from "../content/cv.md";
 import _ProfessionalExperience from "../components/cv/experience";
 import _VolunteerExperience from "../components/cv/volunteer";
@@ -11,6 +9,7 @@ import _Trainings from "../components/cv/trainings";
 import _Education from "../components/cv/education";
 import _Languages from "../components/cv/cv-languages";
 import withSection from "../components/HOC/Section";
+import { ViewContainer as CvContainer } from "../components/cv/styles";
 
 const {
   html,
@@ -42,18 +41,15 @@ const personalDetails = {
   address
 };
 
-const PersonalDetails = withSection(_PersonalDetails)({ padding: 10 });
-const Summary = withSection(_Summary)({ padding: 10 });
-const KeySkills = withSection(_KeySkills)({ padding: 10 });
-const SoftSkills = withSection(_SoftSkills)({ padding: 10 });
-const ProfessionalExperience = withSection(_ProfessionalExperience)({
-  padding: 10,
-  marginBottom: -60
-});
-const VolunteerExperience = withSection(_VolunteerExperience)({ padding: 10 });
-const Trainings = withSection(_Trainings)({ padding: 10 });
-const Education = withSection(_Education)({ padding: 10 });
-const Languages = withSection(_Languages)({ padding: 10 });
+const PersonalDetails = withSection(_PersonalDetails)({});
+const Summary = withSection(_Summary)({});
+const KeySkills = withSection(_KeySkills)({});
+const SoftSkills = withSection(_SoftSkills)({});
+const ProfessionalExperience = withSection(_ProfessionalExperience)({});
+const VolunteerExperience = withSection(_VolunteerExperience)({});
+const Trainings = withSection(_Trainings)({});
+const Education = withSection(_Education)({});
+const Languages = withSection(_Languages)({});
 
 export default function Cv() {
   return (
@@ -76,12 +72,3 @@ export default function Cv() {
     </CvContainer>
   );
 }
-
-const CvContainer = styled.article`
-  display: grid;
-  grid-gap: 20px;
-  padding: 60px;
-  box-shadow: 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  max-width: 1200px;
-  margin: auto;
-`;

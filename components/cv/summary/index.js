@@ -1,13 +1,13 @@
-import React from 'react';
-import {headline, content as contentStyles} from '../styles';
+import React from "react";
+import { GridItem, Headline, Content } from "../styles";
 
-const Summary = ({title, content}) => {
-    return (
-      <React.Fragment>
-        <h2 style={headline}>{title}</h2>
-        <div style={contentStyles} dangerouslySetInnerHTML={content}/>
-      </React.Fragment>
-    )
-}
+const Summary = ({ title, content }) => {
+  return (
+    <GridItem start="1" span="12">
+      <Headline as="h2">{title}</Headline>
+      <Content dangerouslySetInnerHTML={content} />
+    </GridItem>
+  );
+};
 
-export default Summary
+export default Summary;

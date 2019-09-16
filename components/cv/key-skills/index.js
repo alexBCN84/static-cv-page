@@ -1,14 +1,14 @@
-import React from 'react';
-import {headline} from '../styles';
-import Skills from '../skills';
+import React from "react";
+import { GridItem, Headline } from "../styles";
+import Skills from "../skills";
 
-const KeySkills = ({title, content}) => {
-    return (
-      <React.Fragment>
-        <h2 style={headline}>{title}</h2>
-        <Skills content={content} type="key"/>
-      </React.Fragment>
-    )
-}
+const KeySkills = ({ title, content }) => {
+  return (
+    <GridItem start="1" span="12">
+      <Headline as="h2">{title}</Headline>
+      <Skills content={content} type="key" />
+    </GridItem>
+  );
+};
 
 export default KeySkills;
