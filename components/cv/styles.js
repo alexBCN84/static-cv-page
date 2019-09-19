@@ -15,11 +15,17 @@ export const Heading = styled.h1`
   font-weight: 900;
   margin: 0px auto;
   color: ${colors.black};
+  ${media.xs`
+    font-size: 2em;
+  `}
 `;
 
 export const Grid = styled.div`
   display: grid;
   grid-gap: 20px;
+  ${media.xs`
+    grid-gap:1em;
+  `}
   grid-template-columns: repeat(12, 1fr);
   margin: auto;
 `;
@@ -58,6 +64,9 @@ export const ViewContainer = styled.article`
   padding: 60px;
   max-width: 1200px;
   margin: auto;
+  ${media.xs`
+    padding: 1em;
+  `}
   ${media.md`
     box-shadow: 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   `}
@@ -68,6 +77,9 @@ export const Subheadline = styled.h2`
   font-size: 20px;
   line-height: 30px;
   margin-top: 0;
+  ${media.xs`
+    font-size: 1.4em;
+  `}
 `;
 
 export const Details = styled.p`
@@ -80,7 +92,8 @@ export const Details = styled.p`
   font-weight: 400;
   text-align: ${props => props.align};
   ${media.xs`
-    text-align: ${props => props["xs-align"]}
+    text-align: ${props => props["xs-align"]};
+    font-size: 0.9em;
   `}
   ${media.sm`
     text-align: ${props => props["sm-align"]}
@@ -110,12 +123,18 @@ export const Headline = styled.h1`
   text-transform: uppercase;
   line-height: 30px;
   letter-spacing: 3px;
+  ${media.xs`
+    font-size: 2em;
+  `}
 `;
 
 export const Content = styled.div`
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   letter-spacing: 1.2px;
   line-height: 1.5em;
+  ${media.xs`
+    font-size: 1em;
+  `}
 `;
 
 export const Note = styled.p`
@@ -123,7 +142,8 @@ export const Note = styled.p`
 `;
 
 export const Divider = styled.div`
-  width: 100%;
-  height: 2px;
   background-color: red;
+  width: 100%;
+  min-width: 100px;
+  height: 2px;
 `;
