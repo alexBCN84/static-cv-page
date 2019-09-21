@@ -41,17 +41,20 @@ const personalDetails = {
   address
 };
 
-const PersonalDetails = withSection(_PersonalDetails)({});
-const Summary = withSection(_Summary)({});
-const KeySkills = withSection(_KeySkills)({});
-const SoftSkills = withSection(_SoftSkills)({});
-const ProfessionalExperience = withSection(_ProfessionalExperience)({});
-const VolunteerExperience = withSection(_VolunteerExperience)({});
-const Trainings = withSection(_Trainings)({});
-const Education = withSection(_Education)({});
-const Languages = withSection(_Languages)({});
-
 export default function Cv() {
+  const PersonalDetails = withSection(_PersonalDetails)("personalDetails");
+  const Summary = withSection(_Summary)("summary");
+  const KeySkills = withSection(_KeySkills)("keySkills");
+  const SoftSkills = withSection(_SoftSkills)("softSkills");
+  const ProfessionalExperience = withSection(_ProfessionalExperience)(
+    "professionalExperience"
+  );
+  const VolunteerExperience = withSection(_VolunteerExperience)(
+    "volunteerExperience"
+  );
+  const Trainings = withSection(_Trainings)("trainings");
+  const Education = withSection(_Education)("education");
+  const Languages = withSection(_Languages)("languages");
   return (
     <CvContainer>
       <PersonalDetails {...personalDetails} />
@@ -62,7 +65,11 @@ export default function Cv() {
         title="PROFESSIONAL EXPERIENCE IN TECH"
         content={experience}
       />
-      <VolunteerExperience title="VOLUNTEER EXPERIENCE" content={volunteer} />
+      <VolunteerExperience
+        title="VOLUNTEER EXPERIENCE"
+        content={volunteer}
+        id="target"
+      />
       <Trainings
         title="BOOTCAMPS, WORKSHOPS AND TRAINING EVENTS"
         content={trainings}
