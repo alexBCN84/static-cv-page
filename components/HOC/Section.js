@@ -3,8 +3,8 @@ import { Grid, Divider } from "../cv/styles";
 
 export default function withSection(WrappedComponent) {
   const sectionRef = useRef(null);
+
   useEffect(() => {
-    sectionRef.current.style.opacity = 0.0;
     let fadeIntoView;
     let opacity = 0.0;
 
@@ -36,7 +36,8 @@ export default function withSection(WrappedComponent) {
         style={{
           marginBotton: 30,
           marginTop: 30,
-          padding: 10
+          padding: 10,
+          opacity: 0.1
         }}
         ref={sectionRef}
         id={id}
