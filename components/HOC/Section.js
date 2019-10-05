@@ -37,7 +37,7 @@ export default function withSection(WrappedComponent) {
           marginBotton: 30,
           marginTop: 30,
           padding: 10,
-          opacity: 0.1
+          opacity: 0.0
         }}
         ref={sectionRef}
         id={id}
