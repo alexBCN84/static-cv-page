@@ -10,7 +10,6 @@ export default function withSection(WrappedComponent) {
 
     function increaseVisibility(entries) {
       entries.forEach(entry => {
-        console.log(entry);
         if (entry.intersectionRatio > 0) {
           fadeIntoView = setInterval(() => {
             if (opacity >= 1.0) {
