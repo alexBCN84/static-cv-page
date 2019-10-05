@@ -1,47 +1,32 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { Grid, Divider } from "../cv/styles";
 
 export default function withSection(WrappedComponent) {
-  const bottomRef = React.useRef();
-  let increasingOpacity = "opacity";
-  let prevRatio = 0.0;
+  const sectionRef = useRef(null);
+  useEffect(() => {
+    sectionRef.current.style.opacity = 0.0;
+    let fadeIntoView;
+    let opacity = 0.0;
 
-  function buildThresholdList() {
-    let thresholds = [];
-    let numSteps = 20;
-
-    for (let i = 1.0; i <= numSteps; i++) {
-      let ratio = i / numSteps;
-      console.log(ratio);
-      thresholds.push(ratio);
-    }
-
-    thresholds.push(0);
-    return thresholds;
-  }
-
-  React.useEffect(() => {
-    const scroll = new IntersectionObserver(scrollCallback, {
-      root: null,
-      rootMargin: "0px",
-      threshold: buildThresholdList()
-    });
-
-    function scrollCallback(entries) {
+    function increaseVisibility(entries) {
       entries.forEach(entry => {
-        if (entry.intersectionRatio > prevRatio) {
-          entry.target.style.opacity = increasingOpacity.replace(
-            "opacity",
-            entry.intersectionRatio
-          );
+        if (entry.intersectionRatio > 0) {
+          fadeIntoView = setInterval(() => {
+            if (opacity >= 1.0) {
+              () => clearInterval(fadeIntoView);
+            }
+            opacity += 0.1;
+            sectionRef.current.style.opacity = opacity;
+          }, 100);
         }
-        prevRatio = entry.intersectionRatio;
       });
     }
 
-    scroll.observe(bottomRef.current);
+    const sectionObserver = new IntersectionObserver(increaseVisibility);
+    sectionObserver.observe(sectionRef.current);
+
     return () => {
-      scroll.disconnect();
+      sectionObserver.disconnect();
     };
   }, []);
   return id => {
@@ -53,7 +38,7 @@ export default function withSection(WrappedComponent) {
           marginTop: 30,
           padding: 10
         }}
-        ref={bottomRef}
+        ref={sectionRef}
         id={id}
       >
         <WrappedComponent {...props} />
