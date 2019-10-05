@@ -1,95 +1,29 @@
 import React, { useRef, useEffect } from "react";
 import { Grid, Divider } from "../cv/styles";
 
-// STEPS FOR IMPLEMENTING INTERSECTION OBSERVER WITH REACT
-
-// 1. Create a ref for element that intersection observer will be applied to
-// 2. Since intersectionObserver creates sideEffects, insert logic in useEffec hook
-// 3. create options object.
-// 4. create Callback to determine what happens on each threshold
-// 5. create new inersectionObserver and pass the callback function
-// 6. attach observer to observe element assigned to ref
-// 7. return a function that calls disconect()
-
 export default function withSection(WrappedComponent) {
   const sectionRef = useRef(null);
-  let increasingOpacity = "opacity";
-  let opacityIncrement = 0.05;
-  let prevRatio = 0.0;
-
-  function buildThresholdList() {
-    const height = sectionRef.current.offsetHeight;
-    const percentage = (200 * 100) / height;
-
-    // height --> 200
-    // 100 --> x
-    // percentage => 200 * 100 / height
-
-    // 100 --> percentage
-    // 1 --> x
-
-    // ratioToOne => percentage / 100
-    const ratioToOne = percentage / 100;
-    let thresholds = [];
-    let numSteps = 20;
-    let proportionalNumSteps = ratioToOne / 20;
-    let accumulativePropSteps = 0;
-    let objectWithValues = {};
-
-    for (let i = 1.0; i <= numSteps; i++) {
-      accumulativePropSteps = accumulativePropSteps + proportionalNumSteps;
-      let ratio = i / numSteps;
-      objectWithValues[i] = { accumulativePropSteps, ratio };
-      // console.log({
-      //   ratio: ratio,
-      //   i,
-      //   percentage,
-      //   ratioToOne: percentage / 100,
-      //   id: sectionRef.current.id,
-      //   objectWithValues,
-      //   accumulativePropSteps
-      // });
-      // thresholds.push(objectWithValues[i].accumulativePropSteps);
-    }
-
-    thresholds.push(0);
-    return thresholds;
-  }
 
   useEffect(() => {
-    const observerOptions = {
-      root: null,
-      rootMargin: "0px",
-      threshold: buildThresholdList()
-    };
+    let fadeIntoView;
+    let opacity = 0.0;
 
-    function callback(entries, observer) {
+    function increaseVisibility(entries) {
       entries.forEach(entry => {
-        console.log(prevRatio);
-        if (entry.intersectionRatio > prevRatio) {
-          // console.log(prevRatio);
-          entry.target.style.opacity = increasingOpacity.replace(
-            "opacity",
-            opacityIncrement
-          );
+        console.log(entry);
+        if (entry.intersectionRatio > 0) {
+          fadeIntoView = setInterval(() => {
+            if (opacity >= 1.0) {
+              () => clearInterval(fadeIntoView);
+            }
+            opacity += 0.1;
+            sectionRef.current.style.opacity = opacity;
+          }, 100);
         }
-        // if (entry.intersectionRatio > 0.4) {
-        //   entry.target.style.opacity = increasingOpacity.replace(
-        //     "opacity",
-        //     1.0
-        //   );
-        // }
-        prevRatio = entry.intersectionRatio;
-        opacityIncrement = opacityIncrement + 0.05;
-        console.log({
-          id: entry.target.id,
-          opacityIncrement,
-          intersectionRetio: entry.intersectionRatio
-        });
       });
     }
 
-    const sectionObserver = new IntersectionObserver(callback, observerOptions);
+    const sectionObserver = new IntersectionObserver(increaseVisibility);
     sectionObserver.observe(sectionRef.current);
 
     return () => {
@@ -103,7 +37,8 @@ export default function withSection(WrappedComponent) {
         style={{
           marginBotton: 30,
           marginTop: 30,
-          padding: 10
+          padding: 10,
+          opacity: 0.1
         }}
         ref={sectionRef}
         id={id}
