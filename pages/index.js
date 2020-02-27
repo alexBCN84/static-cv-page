@@ -15,6 +15,7 @@ const {
   html,
   attributes: {
     name,
+    avatar,
     title,
     email,
     phone,
@@ -33,6 +34,7 @@ const {
 
 const personalDetails = {
   name,
+  avatar,
   title,
   email,
   phone,

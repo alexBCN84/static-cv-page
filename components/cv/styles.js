@@ -4,17 +4,29 @@ import media from "../layout/mediaQueries";
 
 const colors = {
   black: "#00131a",
-  lighterBlack: "#1a1a1a"
+  lighterBlack: "#1a1a1a",
+
 };
 
 // style components
 
+export const Avatar = styled.img.attrs({
+  src: `${props => props.src}`
+})`
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  
+`;
 export const Heading = styled.h1`
   font-size: 30px;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-weight: 900;
-  margin: 0px auto;
-  color: ${colors.black};
+  text-align: center;
+  color: #424949;
+  margin-bottom: 10px;
   ${media.xs`
     font-size: 2em;
   `}
@@ -41,7 +53,7 @@ export const GridItem = styled.div`
   grid-column: ${props => props.start} / span ${props => props.span};
   ${media.xs`
     grid-column: ${props => props["xs-start"]} / span ${props =>
-    props["xs-span"]};;
+    props["xs-span"]};
   `}
 
   ${media.sm`
@@ -80,6 +92,14 @@ export const Subheadline = styled.h2`
   ${media.xs`
     font-size: 1.4em;
   `}
+`;
+
+export const JobTitle = styled(Subheadline)`
+  text-align: center;
+  font-family: "Helvetica";
+  letter-spacing: 1.5px;
+  color: #2E4053;
+  font-size: 30px;
 `;
 
 export const Details = styled.p`

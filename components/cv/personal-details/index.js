@@ -1,14 +1,16 @@
 import React from "react";
 import {
+  Avatar,
   Heading,
   GridItem,
   Details,
   AddressDetails,
-  Subheadline
+  JobTitle
 } from "../styles";
 
 const PersonalDetails = ({
   name,
+  avatar,
   title,
   email,
   phone,
@@ -18,9 +20,12 @@ const PersonalDetails = ({
 }) => {
   return (
     <React.Fragment>
-      <GridItem xs-start="1" sm-start="1" sm-span="5" xs-span="12">
+      <GridItem start="1" span="12">
+       <Avatar src={avatar}/>
+      </GridItem>
+      <GridItem start="1" span="12">
         <Heading>{name}</Heading>
-        <Subheadline>{title}</Subheadline>
+        <JobTitle>{title}</JobTitle>
       </GridItem>
       <GridItem
         xs-start="1"
