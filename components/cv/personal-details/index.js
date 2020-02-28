@@ -36,10 +36,10 @@ const PersonalDetails = ({
         lg-start="1"
         lg-span="5"
       >
-        <Details as="h3" align="center" md-align="left">
+        <Details as="h3" align="left" md-align="left">
           <Email email={email}/>
         </Details>
-        <Details as="h3" align="center" md-align="left">
+        <Details as="h3" align="left" md-align="left">
           <Phone phone={phone} />
         </Details>
       </GridItem>
@@ -51,11 +51,11 @@ const PersonalDetails = ({
         lg-start="6"
         lg-span="4"
       >
-        <Details as="h3" align="center" md-align="left" lg-align="left">
+        <Details as="h3" align="left" md-align="left" lg-align="left">
           <Linkedin linkedin={linkedin} />
         </Details>
         
-        <Details as="h3" align="center" md-align="left" lg-align="left">
+        <Details as="h3" align="left" md-align="left" lg-align="left">
           <Github github={github} />
         </Details>
       </GridItem>
@@ -67,7 +67,7 @@ const PersonalDetails = ({
         lg-start="10"
         lg-span="3"
       >
-        <Details align="center" lg-align="right">
+        <Details align="left" lg-align="right">
           <Address address={address}/>
         </Details>
       </GridItem>
