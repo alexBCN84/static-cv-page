@@ -1,6 +1,6 @@
 ---
 name: Alejandro Ginés Martínez
-avatar: https://s3.eu-central-1.amazonaws.com/alexgines.com/portfolio_assets/profile_img.jpg
+avatar: https://s3.eu-central-1.amazonaws.com/alexgines.com/portfolio_assets/profile-img.png
 title: Frontend Developer
 email: alejandro.ginesmartinez@gmail.com
 phone: +49(0)176 65034410
