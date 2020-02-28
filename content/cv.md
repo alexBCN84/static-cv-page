@@ -6,7 +6,7 @@ email: alejandro.ginesmartinez@gmail.com
 phone: +49(0)176 65034410
 linkedin: linkedin.com/in/alejandrogines
 github: github.com/alexBCN84
-address: 114 Otto-Suhr-Allee Berlin DE
+address: Berlin DE
 keySkills:
   - skill: Web development & Maintenance
   - skill: Frontend Development

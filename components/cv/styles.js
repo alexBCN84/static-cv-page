@@ -126,17 +126,17 @@ export const Details = styled.p`
   `}
 `;
 
-export const AddressDetails = props => (
-  <Details
-    {...props}
-    children={renderHTML(
-      props.children
-        .split(" ")
-        .map((word, i) => (i === 1 ? word + "<br/>" : word))
-        .join(" ")
-    )}
-  />
-);
+// export const AddressDetails = props => (
+//   <Details
+//     {...props}
+//     children={renderHTML(
+//       props.children
+//         .split(" ")
+//         .map((word, i) => (i === 1 ? word + "<br/>" : word))
+//         .join(" ")
+//     )}
+//   />
+// );
 
 export const Headline = styled.h1`
   font-family: "Lucida Console", Monaco, monospace;
