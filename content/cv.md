@@ -1,12 +1,12 @@
 ---
-name: Alejandro Ginés Martínez
+name: Alex Gines
 avatar: https://s3.eu-central-1.amazonaws.com/alexgines.com/portfolio_assets/profile-img.png
-title: Frontend Developer
+title: React Frontend Developer
 email: alejandro.ginesmartinez@gmail.com
 phone: +49(0)176 65034410
 linkedin: linkedin.com/in/alejandrogines
 github: github.com/alexBCN84
-address: Berlin DE
+address: Berlin
 keySkills:
   - skill: Web development & Maintenance
   - skill: Frontend Development

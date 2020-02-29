@@ -4,10 +4,11 @@ import {
   Heading,
   GridItem,
   Details,
-  JobTitle
+  JobTitle,
+  Divider
 } from "../styles";
 
-import { Email, Phone, Github, Linkedin, Address } from "./contact";
+import { Email, Phone, Github, Linkedin, Location } from "./contact";
 
 const PersonalDetails = ({
   name,
@@ -35,11 +36,11 @@ const PersonalDetails = ({
         sm-span="7"
         lg-start="1"
         lg-span="5"
-      >
-        <Details as="h3" align="left" md-align="left">
+      > 
+        <Details as="h3" align="left" md-align="right">
           <Email email={email}/>
         </Details>
-        <Details as="h3" align="left" md-align="left">
+        <Details as="h3" align="left" md-align="right">
           <Phone phone={phone} />
         </Details>
       </GridItem>
@@ -49,7 +50,19 @@ const PersonalDetails = ({
         sm-start="6"
         sm-span="7"
         lg-start="6"
-        lg-span="4"
+        lg-span="2"
+      >
+      <Details align="center">
+          <Location address={address}/>
+        </Details>
+      </GridItem>
+      <GridItem
+        xs-start="1"
+        xs-span="12"
+        sm-start="6"
+        sm-span="7"
+        lg-start="8"
+        lg-span="5"
       >
         <Details as="h3" align="left" md-align="left" lg-align="left">
           <Linkedin linkedin={linkedin} />
@@ -57,18 +70,6 @@ const PersonalDetails = ({
         
         <Details as="h3" align="left" md-align="left" lg-align="left">
           <Github github={github} />
-        </Details>
-      </GridItem>
-      <GridItem
-        start="1"
-        span="12"
-        sm-start="6"
-        sm-span="7"
-        lg-start="10"
-        lg-span="3"
-      >
-        <Details align="left" lg-align="right">
-          <Address address={address}/>
         </Details>
       </GridItem>
     </React.Fragment>

@@ -1,11 +1,16 @@
 import styled from "styled-components";
-import renderHTML from "react-render-html";
+// import renderHTML from "react-render-html";
 import media from "../layout/mediaQueries";
 
-const colors = {
+export const colors = {
   black: "#00131a",
   lighterBlack: "#1a1a1a",
-
+  greyBlue: "#2E4053",
+  darkGrey: "#424949",
+  greenish: "#DAF7A6",
+  blueish: "#1C2833",
+  redish: "#E74C3C",
+  plomo: "#424949"
 };
 
 // style components
@@ -25,7 +30,7 @@ export const Heading = styled.h1`
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-weight: 900;
   text-align: center;
-  color: #424949;
+  color: ${colors.darkGrey};
   margin-bottom: 10px;
   ${media.xs`
     font-size: 2em;
@@ -98,8 +103,9 @@ export const JobTitle = styled(Subheadline)`
   text-align: center;
   font-family: "Helvetica";
   letter-spacing: 1.5px;
-  color: #2E4053;
+  color: ${colors.greyBlue};
   font-size: 30px;
+  margin-bottom: 10px;
 `;
 
 export const Details = styled.p`
@@ -162,8 +168,9 @@ export const Note = styled.p`
 `;
 
 export const Divider = styled.div`
-  background-color: red;
+  background-color: ${colors.greenish};
   width: 100%;
   min-width: 100px;
   height: 2px;
+  border-bottom: 2px solid ${colors.redish}
 `;
