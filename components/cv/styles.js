@@ -169,6 +169,7 @@ export const Note = styled.p`
 
 export const Divider = styled.div`
   background-color: ${colors.greenish};
+  margin-top: 50px;
   width: 100%;
   min-width: 100px;
   height: 2px;

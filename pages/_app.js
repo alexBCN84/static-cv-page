@@ -11,10 +11,15 @@ const theme = {
 export default class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
-    return (
-      <ThemeProvider theme={theme}>
+    let AppSSR = null;
+    
+    if (typeof window !== 'undefined') {
+      AppSSR = (
+        <ThemeProvider theme={theme}>
         <Component {...pageProps} />
       </ThemeProvider>
-    );
+      )
+    }
+    return AppSSR;
   }
 }

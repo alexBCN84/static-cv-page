@@ -1,9 +1,10 @@
 import React, { useRef, useEffect } from "react";
-import { Grid, Divider } from "../cv/styles";
+import { Grid } from "../cv/styles";
+import { useDevice } from "../hooks";
 
 export default function withSection(WrappedComponent) {
   const sectionRef = useRef(null);
-
+  useDevice();
   useEffect(() => {
     let fadeIntoView;
     let opacity = 0.0;
@@ -21,7 +22,6 @@ export default function withSection(WrappedComponent) {
         }
       });
     }
-
     const sectionObserver = new IntersectionObserver(increaseVisibility);
     sectionObserver.observe(sectionRef.current);
 
@@ -43,7 +43,6 @@ export default function withSection(WrappedComponent) {
         id={id}
       >
         <WrappedComponent {...props} />
-        <Divider />
       </Grid>
     );
 
