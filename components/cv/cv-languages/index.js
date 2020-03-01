@@ -2,7 +2,6 @@ import React from "react";
 import { GridItem, Headline, Content, colors } from "../styles";
 
 const Languages = ({ title, content }) => {
-  console.log(content.map(language => language.l1));
   return (
     <React.Fragment>
       <GridItem start="1" span="12">

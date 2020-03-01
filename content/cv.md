@@ -7,6 +7,12 @@ phone: +49(0)176 65034410
 linkedin: linkedin.com/in/alejandrogines
 github: github.com/alexBCN84
 address: Berlin
+summary: 
+  - 2 – 3 years experienced Web Developer with a previous background in Linguistics, Translations and Education.
+  - Successfully undertook a career change into Tech in 2016 – (more information about previous career achievements on my LinkedIn profile).
+  - A tenacious learner and determined individual with a growth mindset who achieved a career start in web development at Zalando back in 2016.
+  - In 2018 I contributed to exceed ZMS campaigns revenue targets for Zalando Marketing Services with the development of highly customized, brand-tailored landing pages and assisted in the development of key UX UI features, improving the efficiency of ZMS campaign management tooling.
+  - Currently focused on expanding my professional expertise in Frontend - React environment, and Fullstack JS development.
 keySkills:
   - skill: Web development & Maintenance
   - skill: Frontend Development
@@ -114,9 +120,11 @@ education:
     provider: POMPEU FABRA UNIVERSITY.
     title: 'Bachelor’s in Linguistics, Translation & Interpreting'
     year: 2016
-# languages: >-
-#   Spanish & Catalan – native | English, French & Italian – fluent | German –
-#   intermediate level
+publications: 
+  - publication:
+    title: Understanding the THIS Keyword in JavaScript
+    linktointro: Access this article
+    linkto: 'https://medium.com/@Aleginmar/understanding-the-this-keyword-in-javascript-b03c665c7c36'
 languages:
   - l1: Spanish, native speaker
   - l2: Catalan, native speaker
@@ -125,6 +133,3 @@ languages:
   - l5: Italian, fluent
   - l6: German, intermediate
 ---
-2 – 3 years experienced Web Developer with a previous background in Linguistics, Translations and Education. Successfully undertook a career change into Tech in 2016 – (more information about previous career achievements on my LinkedIn profile). A tenacious learner and determined individual with a growth mindset who achieved a career start in web development at Zalando back in 2016. In 2018 I contributed to exceed ZMS campaigns revenue targets for Zalando Marketing Services with the development of highly customized, brand-tailored landing pages and assisted in the development of key UX UI features, improving the efficiency of ZMS campaign management tooling.
-
-**Currently focused on expanding my professional expertise in Frontend - React environment, and Fullstack JS development.**

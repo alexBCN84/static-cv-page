@@ -5,7 +5,15 @@ const Summary = ({ title, content }) => {
   return (
     <GridItem start="1" span="12">
       <Headline as="h2">{title}</Headline>
-      <Content dangerouslySetInnerHTML={content} />
+  <Content as="ul">
+    {
+      content.map((item, i) => {
+        return <li key={i}>
+          {item}
+        </li>
+      })
+  }
+  </Content>
     </GridItem>
   );
 };

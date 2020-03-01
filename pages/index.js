@@ -10,9 +10,9 @@ import _Education from "../components/cv/education";
 import _Languages from "../components/cv/cv-languages";
 import withSection from "../components/HOC/Section";
 import { ViewContainer as CvContainer } from "../components/cv/styles";
+import _Publications from "../components/cv/publications";
 
 const {
-  html,
   attributes: {
     name,
     avatar,
@@ -28,7 +28,9 @@ const {
     volunteer,
     trainings,
     education,
-    languages
+    languages,
+    summary,
+    publications
   }
 } = content;
 
@@ -57,16 +59,18 @@ export default function Cv() {
   const Trainings = withSection(_Trainings)("trainings");
   const Education = withSection(_Education)("education");
   const Languages = withSection(_Languages)("languages");
+  const Publications = withSection(_Publications)("publications");
   return (
     <CvContainer>
       <PersonalDetails {...personalDetails} />
-      <Summary title="SUMMARY" content={{ __html: html }} />
+      <Summary title="SUMMARY" content={summary} />
       <KeySkills title="KEY SKILLS" content={keySkills} />
       <SoftSkills title="SOFT SKILLS" content={softSkills} />
       <ProfessionalExperience
         title="PROFESSIONAL EXPERIENCE IN TECH"
         content={experience}
       />
+      <Publications title="PUBLICATIONS" content={publications} />
       <VolunteerExperience
         title="VOLUNTEER EXPERIENCE"
         content={volunteer}
