@@ -17,7 +17,9 @@ export default function withSection(WrappedComponent) {
               () => clearInterval(fadeIntoView);
             }
             opacity += 0.1;
-            sectionRef.current.style.opacity = opacity;
+            if (sectionRef && sectionRef.current) {
+              sectionRef.current.style.opacity = opacity;
+            }
           }, 100);
         }
       });
