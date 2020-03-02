@@ -8,12 +8,12 @@ const Languages = ({ title, content }) => {
         <Headline as="h2">{title}</Headline>
       </GridItem>
       <GridItem start="1" span="12" style={{ marginTop: -30 }}>
-        <Content as="ul">
+        <Content as="div" style={{marginLeft: "5%"}}>
           {
           content.map(
           (language, i) => {
             language = language[`l${i + 1}`].split(',')
-          return <li style={{listStyleType: 'circle'}} key={i}>{language[0]} <span style={{color: colors.redish}}> => </span> {language[1]}</li>
+          return <p style={{listStyleType: 'circle'}} key={i}>{language[0]} <span style={{color: colors.redish}}> => </span> {language[1]}</p>
           }
             )
           }

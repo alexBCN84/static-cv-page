@@ -41,14 +41,14 @@ const VolunteerExperience = ({ title, content }) => {
                     </GridItem>
 
                     <GridItem
-                      as="ul"
+                      as="div"
                       start="1"
                       span="12"
                       style={{ marginTop: -40 }}
                     >
                       {details.map(({ detail }, i) => (
                         <Details
-                          as="li"
+                          as="p"
                           key={i}
                           style={{ marginTop: 10, marginBottom: 10 }}
                         >
@@ -59,6 +59,7 @@ const VolunteerExperience = ({ title, content }) => {
                   </React.Fragment>
                 );
               })}
+              {i !== content.length - 1 && <Divider style={{width: "50px"}}/>}
             </React.Fragment>
           );
         }

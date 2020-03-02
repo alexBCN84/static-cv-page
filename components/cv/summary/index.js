@@ -1,19 +1,19 @@
 import React from "react";
-import { GridItem, Headline, Content } from "../styles";
+import { GridItem, Content, Divider } from "../styles";
 
-const Summary = ({ title, content }) => {
+const Summary = ({ content }) => {
   return (
-    <GridItem start="1" span="12">
-      <Headline as="h2">{title}</Headline>
-  <Content as="ul">
-    {
-      content.map((item, i) => {
-        return <li key={i}>
-          {item}
-        </li>
-      })
-  }
-  </Content>
+    <GridItem start="1" span="12" sm-start="2" sm-span="10">
+      <Content as="div">
+        {
+          content.map((item, i) => {
+            return <p key={i} style={{textAlign: "center"}}>
+              {item}
+            </p>
+          })
+      }
+      </Content>
+        <Divider style={{width: "50px"}}/>
     </GridItem>
   );
 };

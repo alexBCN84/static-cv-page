@@ -85,7 +85,8 @@ export const ViewContainer = styled.article`
     padding: 1em;
   `}
   ${media.md`
-    box-shadow: 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 2px;
   `}
 `;
 
@@ -103,7 +104,7 @@ export const JobTitle = styled(Subheadline)`
   text-align: center;
   font-family: "Helvetica";
   letter-spacing: 1.5px;
-  color: ${colors.greyBlue};
+  color: ${colors.darkGrey};
   font-size: 30px;
   margin-bottom: 10px;
 `;
@@ -132,22 +133,12 @@ export const Details = styled.p`
   `}
 `;
 
-// export const AddressDetails = props => (
-//   <Details
-//     {...props}
-//     children={renderHTML(
-//       props.children
-//         .split(" ")
-//         .map((word, i) => (i === 1 ? word + "<br/>" : word))
-//         .join(" ")
-//     )}
-//   />
-// );
-
 export const Headline = styled.h1`
   font-family: "Lucida Console", Monaco, monospace;
   text-transform: uppercase;
   line-height: 30px;
+  color: ${colors.redish};
+  margin-left: 5%;
   letter-spacing: 3px;
   ${media.xs`
     font-size: 2em;
@@ -173,5 +164,4 @@ export const Divider = styled.div`
   width: 100%;
   min-width: 100px;
   height: 2px;
-  border-bottom: 2px solid ${colors.redish}
 `;

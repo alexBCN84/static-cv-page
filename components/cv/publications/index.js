@@ -3,7 +3,8 @@ import {
   GridItem,
   Headline,
   Subheadline,
-  Note
+  Note,
+  Divider
 } from "../styles";
 
 import { useDevice } from "../../hooks";
@@ -37,6 +38,7 @@ const Publications = ({ title, content }) => {
                     }
                     </Note>
                 </GridItem>
+                {i !== content.length - 1 && <Divider style={{width: "50px"}}/>}
                 </React.Fragment>
             );
             }
