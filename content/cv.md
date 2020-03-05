@@ -56,7 +56,7 @@ experience:
   - company: Zalando SE
     contributions:
       - contribution: >-
-          Development, optimisation and automatisation of Zalando Marketing
+          Development, optimisation and automation of Zalando Marketing
           Services UI Components Library
         details:
           - detail: >-
@@ -75,7 +75,7 @@ experience:
           Marketing Services tools.
         details:
           - detail: >-
-              Contributing to the codebasde of ZMS campaign management tooling with development and testing of new features.
+              Contributing to the code basde of ZMS campaign management tooling with development and testing of new features.
     dates: Oct 2016 - Present
     place: 'Berlin, DE'
     skills: 'HTML, CSS, sass, JavaScript, Angular, React, NodeJS, Typescript, NextJs, graphQl, StyledComponents'
