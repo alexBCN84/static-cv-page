@@ -25,7 +25,7 @@ const Projects = ({ title, content }) => {
                 <React.Fragment key={i}>
                     <GridItem start="1" span="12">
                         <Subheadline as="p">
-                        {i === 0 ? <Npm style={{verticalAlign: "middle", marginRight: "10px"}}/> : null}
+                        {(i === 0 || i === 1) ? <Npm style={{verticalAlign: "middle", marginRight: "10px"}}/> : null}
                         <strong>
                             {title}
                         </strong>

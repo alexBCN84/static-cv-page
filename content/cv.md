@@ -123,6 +123,10 @@ publications:
     linkto: 'https://medium.com/@Aleginmar/understanding-the-this-keyword-in-javascript-b03c665c7c36'
 projects: 
   - project:
+    title: React Use Device Hook
+    linktointro: An NPM package for react 16. useDevice is a custom hook that can be used to load different content on different viewports. The content also updates on screen resize. Check it out
+    linkto: 'https://www.npmjs.com/package/react-use-device'
+  - project:
     title: React Responsive Grid Library
     linktointro: An NPM package to build responsive layouts for React projects. Check it out
     linkto: 'https://www.npmjs.com/package/react-grid-lib'
