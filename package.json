@@ -16,7 +16,8 @@
     "react-dom": "^16.9.0",
     "react-grid-lib": "^0.2.8",
     "react-render-html": "^0.6.0",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.3.2",
+    "docz": "^2.4.0",
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.10.6",
