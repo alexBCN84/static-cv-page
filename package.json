@@ -10,7 +10,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "docz": "^2.4.0",
     "eslint": "^6.3.0",
     "next": "^10.0.6",
     "react": "^16.9.0",
